@@ -3,7 +3,7 @@
 
 A simple validator to check defined fields in a struct with regular expression.
 
-Contrary to the [go-playground/go-validator](https://github.com/go-playground/validator) package, which tries to give you as many options as possible, struct-validator only requires a regex to fulfill its tasks.
+Contrary to the [go-playground/validator](https://github.com/go-playground/validator) package, which tries to give you as many options as possible, struct-validator only requires a regex to fulfill its tasks.
 
 # Installation
 
@@ -19,7 +19,7 @@ Import struct-validator into your code.
 
 
 
-The package returns two values. The first one is of type **boolean** and the second one is of type **error**.
+The package returns two values. The first one is of type **boolean** and the second one is of type [**error** (ErrValidationResult)](https://pkg.go.dev/github.com/core49/struct-validator#ErrValidationResult).
 
 ```go
 	// check if the struct is valid
