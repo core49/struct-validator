@@ -4,7 +4,7 @@ import (
 	"reflect"
 )
 
-// Field represents a field from a struct but can also be used separately
+// Field represents a fieldName from a struct but can also be used separately
 type Field struct {
 	Name  string
 	Value any

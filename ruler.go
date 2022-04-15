@@ -18,6 +18,7 @@ type rule struct {
 }
 
 // validate is used to check if the regular expression of a rule is valid / compiles
+// and returns an error
 func (r *rule) validate() (err error) {
 	r.rules, err = regexp.Compile(r.expression)
 	return
