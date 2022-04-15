@@ -7,7 +7,7 @@ import "regexp"
 // value: &rule
 type rules map[string]*rule
 
-// rule contains all needed information for a rule
+// rule contains all needed information for a new rule
 // name contains the name of the rule
 // expression contains a regular expression string
 // rules has a pointer to Regexp, which is the representation of a compiled regular expression.

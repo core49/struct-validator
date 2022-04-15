@@ -1,6 +1,6 @@
 package struct_validator
 
-// builtInRules contains a slice of rule which are built-in the package
+// builtInRules contains a set of predefined rule s
 // can be disabled via the ConfigOption (OptionDisableBuiltInRules)
 var builtInRules = []rule{
 	{

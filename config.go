@@ -1,8 +1,8 @@
 package struct_validator
 
 // config contains the configured config options
-// DisableBuiltIn is true when the built-in ruleset is disabled. Default false
-// PanicOnNotDefinedRules is set to true if no panic is desired on an undefined rule in a fieldName. Default false
+// DisableBuiltIn is true when the built-in ruleset is disabled. Defaults to false
+// PanicOnNotDefinedRules is set to true if you want to prevent a panic caused by an undefined rule in a fieldName. Defaults to false
 type config struct {
 	DisableBuiltIn         bool
 	PanicOnNotDefinedRules bool
