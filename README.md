@@ -7,7 +7,7 @@ Contrary to the [go-validator](https://github.com/go-playground/validator) libra
 
 # Installation
 
-Use go get.
+Use **go get**.
 
         go get github.com/core49/struct-validator
 
