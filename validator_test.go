@@ -156,7 +156,7 @@ func TestValidatorLoadBuiltIn(t *testing.T) {
 		assert.Panics(t, func() { v.loadBuiltIn() })
 		assert.Equal(t, len(builtInRules)-1, len(v.rules))
 
-		builtInRules = append(builtInRules[:len(builtInRules)-1])
+		builtInRules = builtInRules[:len(builtInRules)-1]
 	})
 }
 
