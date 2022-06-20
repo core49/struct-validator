@@ -1,5 +1,7 @@
 package struct_validator
 
+// builtInRules contains a set of predefined rule s
+// can be disabled via the ConfigOption (OptionDisableBuiltInRules)
 var builtInRules = []rule{
 	{
 		name:       "alpha",

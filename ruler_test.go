@@ -9,7 +9,7 @@ import (
 var invalidRegex = []string{"[", "*", "[0-9]++", "FOO\\"}
 
 // TestRuleValidate is used to test the following function
-// func (r *rule) validate() (err error)
+// func (r *ruleName) validate() (err error)
 func TestRuleValidate(t *testing.T) {
 	t.Run("OK", func(t *testing.T) {
 		for _, builtInRule := range builtInRules {

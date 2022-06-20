@@ -8,9 +8,9 @@ import (
 func TestErrValidationResultError(t *testing.T) {
 	t.Run("OK", func(t *testing.T) {
 		fields := []ErrInvalidFields{{
-			field: "Answer",
-			value: "forty-two",
-			rule:  "^[0-9]*$",
+			fieldName: "Answer",
+			value:     "forty-two",
+			rule:      "^[0-9]*$",
 		}}
 
 		err := ErrValidationResult{
@@ -26,13 +26,13 @@ func TestErrValidationResultError(t *testing.T) {
 func TestErrInvalidFieldsError(t *testing.T) {
 	t.Run("OK", func(t *testing.T) {
 		err := ErrInvalidFields{
-			field: "Answer",
-			value: 42,
-			rule:  "^[0-9]$",
+			fieldName: "Answer",
+			value:     42,
+			rule:      "^[0-9]$",
 		}
 
 		assert.EqualError(t, err, "Answer 42 ^[0-9]$")
-		assert.Equal(t, err.field, err.Name())
+		assert.Equal(t, err.fieldName, err.Name())
 		assert.Equal(t, err.value, err.Value())
 		assert.Equal(t, err.rule, err.Rule())
 	})
@@ -70,9 +70,9 @@ func TestErrRuleDoesNotCompile(t *testing.T) {
 func TestErrPanicRuleNotDefinedError(t *testing.T) {
 	t.Run("OK", func(t *testing.T) {
 		err := ErrPanicRuleNotDefined{
-			msg:   ErrPanicRuleNotDefinedString,
-			field: "name",
-			rule:  "alpha",
+			msg:       ErrPanicRuleNotDefinedString,
+			fieldName: "name",
+			ruleName:  "alpha",
 		}
 
 		assert.EqualError(t, err, "the called rule does not exist name alpha")
